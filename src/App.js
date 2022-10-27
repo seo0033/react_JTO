@@ -14,14 +14,14 @@ const App = () => {
     <Wrapper>
       <Header />
       <Routes>
-        <Route path='/' element={<Main />}></Route>
-        <Route path='/sub01' element={<Sub01 />}></Route>
-        <Route path='/sub02' element={<Sub02 />}></Route>
-        <Route path='/sub03' element={<Sub03 />}></Route>
-        <Route path='/sub04' element={<Sub04 />}></Route>
+        <Route path='/' element={<Main />} />
+        <Route path='/sub01' element={<Sub01 />} />
+        <Route path='/sub02' element={<Sub02 />} />
+        <Route path='/sub03' element={<Sub03 />} />
+        <Route path='/sub04' element={<Sub04 />} />
       </Routes>
       <Footer />
-    </Wrapper >
+    </Wrapper>
   )
 }
 
