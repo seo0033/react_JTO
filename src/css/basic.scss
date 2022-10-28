@@ -1,0 +1,112 @@
+$mc: #e41d30;
+$sc: #394d60;
+$gc : #dddddd;
+$wc: #f9f9f9;
+
+* {
+    outline: 1px solid rgb(143, 179, 179);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.Wrapper {
+    min-width: 1170px;
+}
+
+.inner {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+.Header {
+    .top__bar {
+        border-bottom: 1px solid $gc;
+        font-size: 13px;
+        font-weight: 500;
+
+        .inner {
+            justify-content: flex-end;
+            line-height: 30px;
+
+            li {
+                border-right: 1px solid $gc;
+                padding: 0 10px;
+            }
+
+            .lang {
+                position: relative;
+
+                .lang_box {
+                    position: absolute;
+                    top: 30px;
+                    left: 50%;
+                    display: none;
+                    transform: translateX(-50%);
+                    flex-direction: column;
+                    border: 2px solid $mc;
+                    background: #fff;
+                    padding: 10px 30px;
+                    font-size: 13px;
+                    z-index: 998;
+
+                }
+
+                &.on .lang_box {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .gnb {
+        h1 {
+            font-size: 0;
+            margin: auto 0;
+
+            img {
+                width: 120px;
+            }
+        }
+
+        nav {
+            ul {
+                display: flex;
+                gap: 50px;
+                line-height: 90px;
+                font-size: 17px;
+                font-weight: 500;
+            }
+
+            a {
+                position: relative;
+                display: block;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0;
+                    height: 3px;
+                    transform: translateX(-50%);
+                    background: $mc;
+                }
+
+                &.active::after {
+                    width: 100%;
+                    transition: 0.3s;
+                }
+            }
+        }
+
+
+    }
+}

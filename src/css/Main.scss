@@ -1,0 +1,83 @@
+.MainVisual {
+    position: relative;
+    height: 650px;
+
+    .slideitm {
+        &:nth-child(1) {
+            background: #f00;
+        }
+
+        &:nth-child(2) {
+            background: #ff0;
+        }
+    }
+
+    .MainSlide {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        height: 300px;
+        transform: translate(0, -50%);
+        margin: 0 0 0 -585px;
+        white-space: pre-wrap;
+    }
+
+}
+
+.MainContent {
+    padding: 150px 0 100px 0;
+    background: linear-gradient(to top, #f4f4f4 50%, transparent 50%);
+
+    .inner {
+        display: flex;
+        gap: 30px;
+
+        &>* {
+            flex: 1;
+        }
+
+        figure {
+            margin: 0 0 30px 0;
+            border-radius: 50px 0;
+            overflow: hidden;
+        }
+
+        strong {
+            position: relative;
+            display: block;
+            font-size: 25px;
+            margin: 0 0 30px 0;
+
+            &::before {
+                content: "MORE";
+                position: absolute;
+                top: -50px;
+                right: 30px;
+                background: rgba(244, 203, 79, 0.5);
+                color: #fff;
+                border-radius: 50%;
+                font-size: 12px;
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 60px;
+                height: 1px;
+                background: #da544b;
+                margin: 15px 0;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            font-weight: 500;
+        }
+    }
+}

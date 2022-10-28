@@ -1,9 +1,8 @@
-import React from 'react';
 import Article from './Article';
 import Aside from './Aside';
 import '../css/Subpage.scss'
 
-const Sub01 = ({ content }) => {
+const Board = ({ content }) => {
     const num = 0;
     return (
         <div className='Subpage'>
@@ -18,4 +17,4 @@ const Sub01 = ({ content }) => {
     )
 }
 
-export default Sub01
+export default Board
